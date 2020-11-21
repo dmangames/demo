@@ -1,0 +1,74 @@
+<head>
+    
+</head>
+<body>
+    <h1>Personality Quiz</h1>
+    <h2>What kind of Pokemon are you?</h2>
+    <h3>Question 1</h3>
+    <p>What kind of environment do you like?</p>
+    <button onclick="record(this)" class="rock">Mountain</button>
+    <button onclick="record(this)" class="water">Ocean</button>
+    <button onclick="record(this)" class="ghost">Cave</button>
+    <button onclick="record(this)" class="grass">Jungle</button>
+    <h3>Question 2</h3>
+    <p>What's your favorite fruit?</p>
+    <button onclick="record(this)" class="grass">Banana</button>
+    <button onclick="record(this)" class="water">Watermelon</button>
+    <button onclick="record(this)" class="rock">Apple</button>
+    <button onclick="record(this)" class="fire">Strawberries</button>
+    <h3>Question 3</h3>
+    <p>What's your favorite game?</p>
+    <button onclick="record(this)" class="fire">The Floor is Lava</button>
+    <button onclick="record(this)" class="water">Maro Polo</button>
+    <button onclick="record(this)" class="rock">Jenga</button>
+    <button onclick="record(this)" class="ghost">Hide and Seek</button>
+    
+    <h2>Press submit when you are done!</h2>
+    <button onclick="processAnswers()">Submit</button>
+    
+    <script>
+        var water = 0;
+        var fire = 0;
+        var grass = 0;
+        var ghost = 0;
+        var rock = 0;
+        
+        var result = "";
+        function record(type){
+            if(type.className == "water")
+                water++;
+            if(type.className == "fire")
+                fire++;
+            if(type.className == "grass")
+                grass++;
+            if(type.className == "ghost")
+                ghost++;
+            if(type.className == "rock")
+                rock++;
+            
+            type.style.backgroundColor = "green";
+        }
+        
+        function processAnswers(){
+            if(rock >= 3)
+                result = "You are a Steelix";
+            else if(water >= 2)
+                result = "You are a Dewgong";
+            else if(fire >= 2)
+                result = "You are a Charmander";
+            else if(grass >= 2)
+                result = "You are a Bellsprout";
+            else if(ghost >= 2)
+                result = "You are a Ghastly";
+            else if(rock >= 2)
+                result = "You are a Geodude";
+            else
+                result = "You are an Eevee";
+            
+            var p = document.createElement("P");
+            var t = document.createTextNode(result);
+            p.appendChild(t);
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
