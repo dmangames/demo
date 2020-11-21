@@ -1,0 +1,51 @@
+#hero {
+    background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    width: 1000px;
+    height: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+#hero-text {
+    font-size: 70px;
+    vertical-align: middle;
+    display: inline-block;
+    padding-top: 80px;
+    padding-right: 100px;
+    color: darkorange;
+}
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+}
+.navbar li{
+    float: left;
+}
+.navbar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.active {
+    background-color: aqua;
+}
+.food-img {
+    width: 200px;
+    height: 200px;
+}
+.row {
+    display: flex;
+}
+.item {
+    flex: 1;
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
